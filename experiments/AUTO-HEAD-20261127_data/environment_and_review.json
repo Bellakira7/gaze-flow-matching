@@ -1,0 +1,24 @@
+{
+  "code_commit": "c65b162d4c663adafcd482e031ab1d0cf5af19db",
+  "unit_tests": {
+    "count": 7,
+    "passed": 7
+  },
+  "software": {
+    "python": "3.12.3",
+    "torch": "2.9.0",
+    "torchvision": "0.24.0",
+    "opencv": "4.11.0",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "ffmpeg": "6.1.1"
+  },
+  "accelerator": "PPU-ZW810E physical GPU 1; CUDA-compatible vendor runtime",
+  "preview_inspection_frames": [
+    0,
+    180,
+    359
+  ],
+  "preview_findings": "Visible heads aligned with their boxes and colors at inspected frames; boy is not detected initially and has ID 4 in middle/final frames. Identity accuracy was not scored.",
+  "io_fixture_note": "The first rotated-video fixture used a metadata rotate tag that FFmpeg 6.1.1 did not retain; corrected fixture uses -display_rotation 90. No implementation change was required."
+}

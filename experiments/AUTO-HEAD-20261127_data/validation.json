@@ -1,0 +1,309 @@
+{
+  "protocol": "automatic-demo-engineering-v1",
+  "dataset": "VideoAttentionTarget MLB Interview 18341_18942 excerpt (360 frames) and synthetic black input",
+  "aggregation": "per-run frame/person-frame counts; no accuracy score",
+  "results": [
+    {
+      "run": "auto_smoke",
+      "checks_passed": true,
+      "decoded_frames": 2,
+      "person_frames": 6,
+      "output_probe": {
+        "width": 1280,
+        "height": 832,
+        "avg_frame_rate": "30/1",
+        "duration": "0.066667",
+        "nb_read_frames": "2"
+      },
+      "tracks": {
+        "1": {
+          "first_frame": 0,
+          "last_frame": 1,
+          "person_frames": 2,
+          "predicted_frames": 0
+        },
+        "2": {
+          "first_frame": 0,
+          "last_frame": 1,
+          "person_frames": 2,
+          "predicted_frames": 0
+        },
+        "3": {
+          "first_frame": 0,
+          "last_frame": 1,
+          "person_frames": 2,
+          "predicted_frames": 0
+        }
+      },
+      "stats": {
+        "model": "flowET_d6",
+        "training_seed": 0,
+        "epoch": 14,
+        "checkpoint_sha256": "200072de520ca356e69591121a63e3ef4979b046b08d4166fe3564a5e4503657",
+        "video_sha256": "4449e8c49c28beb2bedaca94b8650c519c6fb0cfd1ca9330dca9b8f5fd821ea3",
+        "head_boxes_sha256": null,
+        "frames": 2,
+        "output_fps": 30.0,
+        "seconds": 0.06666666666666667,
+        "samples_per_person_frame": 10000,
+        "frame_seed": 2026,
+        "gaze_temporal_smoothing": false,
+        "head_box_smoothing": true,
+        "head_boxes": "YuNet faces expanded 1.5x, center shifted up 0.1 face height; Kalman/Hungarian tracking",
+        "detector_sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "target": "all",
+        "track_ids": [
+          1,
+          2,
+          3
+        ],
+        "person_frames": 6,
+        "frames_without_selected_heads": 0,
+        "predicted_person_frames": 0,
+        "scene_cut_frames": [],
+        "gaze_annotations_used": false,
+        "wall_seconds": 5.846748534124345,
+        "median_forward_seconds_per_nonempty_frame": 2.4491612585261464,
+        "median_detection_tracking_seconds": 0.040508187375962734,
+        "output_sha256": "71134d56f759fde9290c43ea8c97b99e4e58038240297651760a1f6f0d85c53e",
+        "config": {
+          "video": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/FLOW-VIDEO-20261127/source_continuous.mp4",
+          "checkpoint": "/cpfs01/shared/public/users/ace.yang/gaze/experiments/flow_eye_d6_s0/epoch_14.pt",
+          "backbone_weights": "/cpfs01/shared/public/users/yuezhang.lv/RoMa/dinov2_vitl14_pretrain.pth",
+          "out": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/AUTO-HEAD-20261127/auto_smoke",
+          "head_boxes": null,
+          "target": "all",
+          "det_threshold": 0.8,
+          "det_size": 960,
+          "min_face_size": 24,
+          "max_heads": 8,
+          "track_max_age": 15,
+          "track_predict_gap": 2,
+          "limit": 2,
+          "samples": 10000,
+          "seed": 2026
+        },
+        "output_timing": "one output frame per decoded frame, constant average input fps; audio omitted"
+      }
+    },
+    {
+      "run": "supplied_smoke",
+      "checks_passed": true,
+      "decoded_frames": 2,
+      "person_frames": 2,
+      "output_probe": {
+        "width": 1280,
+        "height": 832,
+        "avg_frame_rate": "30/1",
+        "duration": "0.066667",
+        "nb_read_frames": "2"
+      },
+      "tracks": {
+        "1": {
+          "first_frame": 0,
+          "last_frame": 1,
+          "person_frames": 2,
+          "predicted_frames": 0
+        }
+      },
+      "stats": {
+        "model": "flowET_d6",
+        "training_seed": 0,
+        "epoch": 14,
+        "checkpoint_sha256": "200072de520ca356e69591121a63e3ef4979b046b08d4166fe3564a5e4503657",
+        "video_sha256": "4449e8c49c28beb2bedaca94b8650c519c6fb0cfd1ca9330dca9b8f5fd821ea3",
+        "head_boxes_sha256": "be229eb8c1c7235273e728615aedd2c227b9c5106ee6a9bd3207dcfc941fe609",
+        "frames": 2,
+        "output_fps": 30.0,
+        "seconds": 0.06666666666666667,
+        "samples_per_person_frame": 10000,
+        "frame_seed": 2026,
+        "gaze_temporal_smoothing": false,
+        "head_box_smoothing": false,
+        "head_boxes": "supplied normalized track",
+        "detector_sha256": null,
+        "target": "all",
+        "track_ids": [
+          1
+        ],
+        "person_frames": 2,
+        "frames_without_selected_heads": 0,
+        "predicted_person_frames": 0,
+        "scene_cut_frames": [],
+        "gaze_annotations_used": false,
+        "wall_seconds": 3.6716412026435137,
+        "median_forward_seconds_per_nonempty_frame": 1.401999251684174,
+        "median_detection_tracking_seconds": 3.196392208337784e-05,
+        "output_sha256": "703dbf376a9a32cdc76b80dc5545598d0c5071fe0d8678086515867f4212b0b6",
+        "config": {
+          "video": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/FLOW-VIDEO-20261127/source_continuous.mp4",
+          "checkpoint": "/cpfs01/shared/public/users/ace.yang/gaze/experiments/flow_eye_d6_s0/epoch_14.pt",
+          "backbone_weights": "/cpfs01/shared/public/users/yuezhang.lv/RoMa/dinov2_vitl14_pretrain.pth",
+          "out": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/AUTO-HEAD-20261127/supplied_smoke",
+          "head_boxes": "assets/head_boxes.csv",
+          "target": "all",
+          "det_threshold": 0.8,
+          "det_size": 960,
+          "min_face_size": 24,
+          "max_heads": 8,
+          "track_max_age": 15,
+          "track_predict_gap": 2,
+          "limit": 2,
+          "samples": 10000,
+          "seed": 2026
+        },
+        "output_timing": "one output frame per decoded frame, constant average input fps; audio omitted"
+      }
+    },
+    {
+      "run": "blank_smoke",
+      "checks_passed": true,
+      "decoded_frames": 2,
+      "person_frames": 0,
+      "output_probe": {
+        "width": 640,
+        "height": 472,
+        "avg_frame_rate": "30/1",
+        "duration": "0.066667",
+        "nb_read_frames": "2"
+      },
+      "tracks": {},
+      "stats": {
+        "model": "flowET_d6",
+        "training_seed": 0,
+        "epoch": 14,
+        "checkpoint_sha256": "200072de520ca356e69591121a63e3ef4979b046b08d4166fe3564a5e4503657",
+        "video_sha256": "8ad91ca1cde2903977b80bac2d31410fcf69694a237413cdeead053b225b4406",
+        "head_boxes_sha256": null,
+        "frames": 2,
+        "output_fps": 30.0,
+        "seconds": 0.06666666666666667,
+        "samples_per_person_frame": 10000,
+        "frame_seed": 2026,
+        "gaze_temporal_smoothing": false,
+        "head_box_smoothing": true,
+        "head_boxes": "YuNet faces expanded 1.5x, center shifted up 0.1 face height; Kalman/Hungarian tracking",
+        "detector_sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "target": "all",
+        "track_ids": [],
+        "person_frames": 0,
+        "frames_without_selected_heads": 2,
+        "predicted_person_frames": 0,
+        "scene_cut_frames": [],
+        "gaze_annotations_used": false,
+        "wall_seconds": 0.7560740020126104,
+        "median_forward_seconds_per_nonempty_frame": null,
+        "median_detection_tracking_seconds": 0.010347852017730474,
+        "output_sha256": "f621e0bc918f2aa3912740d2052f38e8315dffce20e05d643be09065924b24b2",
+        "config": {
+          "video": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/AUTO-HEAD-20261127/blank.mp4",
+          "checkpoint": "/cpfs01/shared/public/users/ace.yang/gaze/experiments/flow_eye_d6_s0/epoch_14.pt",
+          "backbone_weights": "/cpfs01/shared/public/users/yuezhang.lv/RoMa/dinov2_vitl14_pretrain.pth",
+          "out": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/AUTO-HEAD-20261127/blank_smoke",
+          "head_boxes": null,
+          "target": "all",
+          "det_threshold": 0.8,
+          "det_size": 960,
+          "min_face_size": 24,
+          "max_heads": 8,
+          "track_max_age": 15,
+          "track_predict_gap": 2,
+          "limit": 0,
+          "samples": 10000,
+          "seed": 2026
+        },
+        "output_timing": "one output frame per decoded frame, constant average input fps; audio omitted"
+      }
+    },
+    {
+      "run": "full",
+      "checks_passed": true,
+      "decoded_frames": 360,
+      "person_frames": 1424,
+      "output_probe": {
+        "width": 1280,
+        "height": 832,
+        "avg_frame_rate": "30/1",
+        "duration": "12.000000",
+        "nb_read_frames": "360"
+      },
+      "tracks": {
+        "1": {
+          "first_frame": 0,
+          "last_frame": 359,
+          "person_frames": 360,
+          "predicted_frames": 0
+        },
+        "2": {
+          "first_frame": 0,
+          "last_frame": 359,
+          "person_frames": 360,
+          "predicted_frames": 0
+        },
+        "3": {
+          "first_frame": 0,
+          "last_frame": 359,
+          "person_frames": 360,
+          "predicted_frames": 0
+        },
+        "4": {
+          "first_frame": 16,
+          "last_frame": 359,
+          "person_frames": 344,
+          "predicted_frames": 0
+        }
+      },
+      "stats": {
+        "model": "flowET_d6",
+        "training_seed": 0,
+        "epoch": 14,
+        "checkpoint_sha256": "200072de520ca356e69591121a63e3ef4979b046b08d4166fe3564a5e4503657",
+        "video_sha256": "4449e8c49c28beb2bedaca94b8650c519c6fb0cfd1ca9330dca9b8f5fd821ea3",
+        "head_boxes_sha256": null,
+        "frames": 360,
+        "output_fps": 30.0,
+        "seconds": 12.0,
+        "samples_per_person_frame": 10000,
+        "frame_seed": 2026,
+        "gaze_temporal_smoothing": false,
+        "head_box_smoothing": true,
+        "head_boxes": "YuNet faces expanded 1.5x, center shifted up 0.1 face height; Kalman/Hungarian tracking",
+        "detector_sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+        "target": "all",
+        "track_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "person_frames": 1424,
+        "frames_without_selected_heads": 0,
+        "predicted_person_frames": 0,
+        "scene_cut_frames": [],
+        "gaze_annotations_used": false,
+        "wall_seconds": 781.800046407152,
+        "median_forward_seconds_per_nonempty_frame": 2.072233690181747,
+        "median_detection_tracking_seconds": 0.025053775403648615,
+        "output_sha256": "20ad66b815b2eb3428f804d154bc0cd043a5f93362838b5949cb89b3e7620bf1",
+        "config": {
+          "video": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/FLOW-VIDEO-20261127/source_continuous.mp4",
+          "checkpoint": "/cpfs01/shared/public/users/ace.yang/gaze/experiments/flow_eye_d6_s0/epoch_14.pt",
+          "backbone_weights": "/cpfs01/shared/public/users/yuezhang.lv/RoMa/dinov2_vitl14_pretrain.pth",
+          "out": "/cpfs01/shared/public/groups/closeloop/ace.yang/gaze/demos/AUTO-HEAD-20261127/full",
+          "head_boxes": null,
+          "target": "all",
+          "det_threshold": 0.8,
+          "det_size": 960,
+          "min_face_size": 24,
+          "max_heads": 8,
+          "track_max_age": 15,
+          "track_predict_gap": 2,
+          "limit": 0,
+          "samples": 10000,
+          "seed": 2026
+        },
+        "output_timing": "one output frame per decoded frame, constant average input fps; audio omitted"
+      }
+    }
+  ]
+}

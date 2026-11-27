@@ -1,0 +1,8 @@
+{
+  "odd_dimensions_pad_to_even": true,
+  "rotated_phone_video_dimensions": true,
+  "rotated_dimensions": [
+    360,
+    640
+  ]
+}

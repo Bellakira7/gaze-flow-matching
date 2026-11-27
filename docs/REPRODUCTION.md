@@ -46,7 +46,7 @@ The complete G2 bundle/gate additionally needs the G1 separated-mode mask at `re
 
 ## VideoAttentionTarget and supplemental experiments
 
-The downloadable demo applies the **GazeFollow main checkpoint** frame by frame, with supplied head boxes. It is not the VAT-finetuned checkpoint used by the separate current-frame VAT experiment. Forecasting, current-frame VAT, ray variants, and other ablations remain in `gazelle_online/` as separate research entry points.
+Both downloadable demos apply the **GazeFollow main checkpoint** frame by frame. The original v1.0.0 demo uses supplied head boxes; v1.1.0 uses YuNet face-derived head boxes and automatic geometry-based tracking. Only head-box geometry is temporally filtered; gaze predictions are not. Neither automatic detection nor track identity accuracy has been benchmarked here. It is not the VAT-finetuned checkpoint used by the separate current-frame VAT experiment. Forecasting, current-frame VAT, ray variants, and other ablations remain in `gazelle_online/` as separate research entry points.
 
 VAT comparative scoring uses shared tools that also served the Gaze-R1 experiments. These modules are included to preserve imports, but their VLM training/inference commands are not required for the paper's flow model or this demo.
 
@@ -55,3 +55,5 @@ VAT comparative scoring uses shared tools that also served the Gaze-R1 experimen
 Path constants now resolve from each script's repository location. `DINOV2_WEIGHTS` supplies a local frozen backbone; otherwise the bundled DINOv2 loader uses its official pretrained-weight URL. The original source hashes are preserved in `provenance/source_manifest.json`.
 
 The original protocol documents retain their bytes and checksums. Packaging does not establish a fresh full-benchmark reproduction. The release validation checks parsing, dependency imports, checkpoint loading, and video inference; its concrete results are recorded in `provenance/validation.json`.
+
+Automatic video validation, including the exact preset and limitations, is recorded in [AUTO-HEAD-20261127](../experiments/AUTO-HEAD-20261127.md). CPU tracking checks can be run with `python -m unittest discover -s tests -v`.
