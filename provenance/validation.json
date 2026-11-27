@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-27",
+  "python_files_parsed": 239,
+  "research_python_files": 68,
+  "core_class_and_function_asts_unchanged": {
+    "gazelle_online/gaze_models.py": true,
+    "gazelle_online/gaze_eye.py": true,
+    "gazelle_online/gaze_eval.py": true,
+    "setmetrics/metrics.py": true,
+    "setmetrics/g2_eval.py": true
+  },
+  "checks": {
+    "demo_cli_help": true,
+    "train_entrypoint_import_and_help": true,
+    "G2_preregistration_checksum": true,
+    "released_checkpoint_loaded": true,
+    "continuous_video_inference": {
+      "frames": 2,
+      "samples_per_frame": 10000,
+      "shape": [
+        2,
+        10000,
+        2
+      ],
+      "finite": true,
+      "normalized_weights": true,
+      "output_full_decode": true,
+      "fps": 30,
+      "resolution": [
+        1280,
+        832
+      ]
+    },
+    "credential_pattern_scan_matches": 0
+  },
+  "tested_platform": {
+    "python": "3.12",
+    "torch": "2.9.0",
+    "torchvision": "0.24.0",
+    "accelerator": "PPU-ZW810E",
+    "runtime": "vendor CUDA compatibility runtime"
+  },
+  "limits": [
+    "Only the two-frame packaging smoke was rerun; the released 360-frame demo was verified in the original experiment",
+    "No new training or full benchmark evaluation",
+    "No separate NVIDIA hardware validation performed"
+  ],
+  "source_video_sha256": "4449e8c49c28beb2bedaca94b8650c519c6fb0cfd1ca9330dca9b8f5fd821ea3",
+  "checkpoint_sha256": "200072de520ca356e69591121a63e3ef4979b046b08d4166fe3564a5e4503657"
+}

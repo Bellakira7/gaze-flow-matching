@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.mp4 binary
+*.jpg binary
+*.png binary
+*.pt binary
+# Frozen preregistration hashes require exact LF bytes on every platform.
+prereg/*.md text eol=lf

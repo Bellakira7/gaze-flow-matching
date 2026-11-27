@@ -1,0 +1,50 @@
+{
+  "model": "flowET_d6",
+  "seed": 0,
+  "epoch": 14,
+  "checkpoint_sha256": "200072de520ca356e69591121a63e3ef4979b046b08d4166fe3564a5e4503657",
+  "dataset": "VideoAttentionTarget test",
+  "clip": "MLB Interview/18341_18942",
+  "track": "s03.txt",
+  "head_boxes": "Dataset per-person track, supplied as input; no automatic head detector",
+  "gaze_annotations_used": false,
+  "framewise_inference": true,
+  "temporal_smoothing": false,
+  "source_frames_contiguous": true,
+  "first_frame": 18346,
+  "last_frame": 18705,
+  "frames": 360,
+  "output_fps": 30,
+  "output_seconds": 12.0,
+  "frame_seed": 2026,
+  "noise_policy": "Same initial random samples for each independently processed frame",
+  "sample_count_per_frame": 10000,
+  "sampler": {
+    "solver": "heun",
+    "steps": 16,
+    "gamma": 3.0,
+    "sigma_h": 1.0
+  },
+  "source_resolution": [
+    1280,
+    720
+  ],
+  "output_resolution": [
+    1280,
+    832
+  ],
+  "wall_seconds": 225.065696537029,
+  "inference_seconds_total": 196.24332727026194,
+  "inference_seconds_median": 0.5399847275111824,
+  "inference_note": "Measured forward time excludes loading, preprocessing, clustering, rendering, and encoding; not a realtime claim",
+  "files": {
+    "source_continuous.mp4": {
+      "bytes": 2447649,
+      "sha256": "4449e8c49c28beb2bedaca94b8650c519c6fb0cfd1ca9330dca9b8f5fd821ea3"
+    },
+    "flowET_d6_continuous_demo.mp4": {
+      "bytes": 2800095,
+      "sha256": "5621a6b25f7e173b1b0aa298eabba36c6da97970588d7e640da8e98bf5908ac2"
+    }
+  }
+}

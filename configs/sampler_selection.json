@@ -1,0 +1,16 @@
+{
+ "flow": {
+  "solver": "heun",
+  "steps": 16,
+  "gamma": 3.0
+ },
+ "diff": {
+  "steps": 64,
+  "M_draw": 64
+ },
+ "sigma_h": 1.0,
+ "flow_nll_best": 5.427933259723785,
+ "diff_nll_best": 6.120755928387176,
+ "n_holdout": 3762,
+ "n_samples": 10000
+}
